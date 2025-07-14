@@ -1,0 +1,276 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default margin/padding and set height/width */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: arial, sans-serif;
+  background-color: #f5f2e7;
+  color: #333;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.image-container {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  max-width: 100vw;
+  object-fit: contain;
+}
+
+
+/* === nav === */
+  .nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+  gap: 1rem;
+}
+
+/* Center the title */
+.nav-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  background-color: #fff5e1;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 16px 20px;
+  transition: top 0.5s;
+}
+
+.logo {
+  font-size: 24px;
+  color: #b22222;
+  margin: 0;
+}
+
+/* Hamburger menu button */
+.menu-toggle {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  color: #b22222;
+}
+
+/* Navigation menu */
+.menu {
+  display: none;
+  flex-direction: column;
+  background-color: #fff5e1;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #b22222;
+  font-weight: bold;
+  padding: 10px 0;
+  display: block;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #8b4513;
+}
+
+/* Show menu when toggled */
+.menu.show {
+  display: flex;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    border-top: none;
+  }
+
+  .menu a {
+    padding: 0;
+  }
+}
+
+/*picture info section */
+    .pics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 248px);
+      gap: 30px;
+      padding: 10px;
+      max-width: 1200px;
+      margin: auto;
+      margin-top: 100px;
+    }
+
+    .title {
+      grid-column: 1 / -1; /* spans all columns */
+      width: 100%;
+    }
+
+    .mainimg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .img1, .img2, .img3, .img4 {
+      height: 100%;
+}
+
+  /* Custom positioning to match the layout */
+.img1 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.img2 {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* Removed .img3 and .img4 */
+
+.text1 {
+  grid-column: 1;
+  grid-row: 2 / span 2;
+}
+
+.text2 {
+  grid-column: 1 / span 2; /* Spans columns 1 and 2 */
+  grid-row: 4 / span 2;    /* Spans rows 4 and 5 */
+}
+
+/* === Scroll Section === */
+.scroll-wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-section {
+  display: flex;
+  width: 400vw;
+  height: 100vh;
+}
+
+.panel {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f2e7;
+  border-right: 2px solid #fff;
+}
+
+/* === Audio Panel Styling === */
+.audiotitle {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.audiodesc {
+  font-family: Georgia, serif;
+  font-size: large;
+}
+
+/* === Animations === */
+.slideleft {
+  transform: translateX(-100%);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+}
+
+.slideleft.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slideright {
+  transform: translateX(100%);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+}
+
+.slideright.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* === Mobile & Tablet View: Stack Images === */
+@media (max-width: 767px) {
+  .pics {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 100px;
+  }
+
+  .pics > div,
+  .pics .mainimg {
+    width: 100%;
+    height: auto;
+  }
+
+  .text1, .text2,
+  .img1, .img2, .img3, .img4 {
+    all: unset; /* Reset any grid-specific positioning */
+  }
+
+  .mainimg {
+    object-fit: contain;
+  }
+}
+
+/* Show/hide images based on device */
+.desktop-only { display: block; }
+.mobile-only { display: none; }
+
+@media (max-width: 767px) {
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; }
+}
