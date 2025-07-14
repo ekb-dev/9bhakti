@@ -1,14 +1,67 @@
----
-name: HTML Starter
-slug: html-starter-with-analytics
-description: HTML5 template with analytics and advanced routing configuration.
-deployUrl: https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/html&project-name=html
-relatedTemplates:
-  - nextjs-boilerplate
----
+Website/App development  
+Skills Info
 
-# HTML Starter
+Topic - 9 Types Of Bhakti
 
-This is a starter HTML5 templates which is configured with Vercel Analytics (through a `script` tag), advanced routing with [Vercel Edge Middleware](https://vercel.com/docs/concepts/functions/edge-middleware), as well as some basic styles
+Participants 
+Darshan M Patel - 15401
+Sneh G Thakkar -  1445
+Deep H Patel - 31831
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/html&project-name=html)
+Links
+Github Repository - https://github.com/ekb-dev/9bhakti
+Hosted website - 9bhakti.vercel.app
+
+ How the App Supports the 9 Bhaktis
+Each section of the site is designed to teach, inspire, and involve the user in one of the Navdha Bhaktis, including:
+Shravan Bhakti (Listening)
+
+
+The site encourages users to listen to kirtans, katha, and prasangs of great devotees and spiritual leaders, deepening spiritual understanding through sound.
+
+
+Kirtan Bhakti (Chanting)
+
+
+Includes inspirational kirtans and lyrics, motivating users to sing or reflect on devotional songs, which uplift the soul.
+
+
+Smaran Bhakti (Remembrance)
+
+
+Promotes constant remembrance of Maharaj and Swami through quotes, messages, and personal daily reflections.
+
+
+Seva Bhakti (Service)
+
+
+Encourages engaging in physical or digital seva, with prompts and examples of how users can serve Maharaj and the Sant.
+
+
+Archanam Bhakti (Worship)
+
+
+Visuals, videos, or activities that guide users on how to offer daily devotion, arti, and puja.
+
+
+Vandan Bhakti (Prayer)
+
+
+Provides daily prayers and inspirational verses, helping users communicate their feelings and surrender to the Satpurush.
+
+Dasya Bhakti (Servitude)
+
+
+Highlights stories of great devotees who lived as das of God and the Sant, inspiring users to adopt a similar mindset.
+
+
+Sakhya Bhakti (Friendship)
+
+
+Encourages forming a loving friendship with Maharaj and Swami, promoting spiritual intimacy and trust.
+
+
+Atma-Nivedan Bhakti (Complete Surrender)
+
+
+Teaches about total surrender of ego and will through meditations and teachings from our Gurus and shastras.
